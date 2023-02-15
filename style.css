@@ -1,0 +1,38 @@
+* {
+    text-decoration: none;
+    overflow: auto;
+ }
+
+body {
+    margin: 0;
+    background-color: peachpuff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: brown;
+    padding: 0px 10px;   
+    color: yellow;
+}
+
+.placeholder {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    font-size: 110%;
+    justify-content: center;
+    color: white;
+    width: 20%;
+    background-color:lightsteelblue;
+    justify-self: center;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 2%;
+    margin-top: 5%;
+    border: 5px double white;
+}

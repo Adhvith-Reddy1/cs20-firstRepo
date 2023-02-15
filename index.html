@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Joe's Hotdog Stand</title>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Joe's Hotdog Stand</h1>
+    </nav>
+    <div class="placeholder">
+        <p>
+            <script>
+
+                function round(num) 
+                {
+                    num = " " + num;
+                    arr = num.split(".");
+                    return arr[0] + "." + arr[1].substring(0,2);
+                }
+
+                var numDog = parseInt(prompt("How many hot dogs would you like"));
+                var numFries = parseInt(prompt("How many fries would you like?"));
+                var numSodas = parseInt(prompt("How many sodas would you like?"));
+
+                if (numDog > 0)
+                document.write("Hot dogs: " + numDog + "<br /><br />");
+                if (numFries > 0)
+                document.write("Fries: " + numFries + "<br /><br />");
+                if (numSodas > 0)
+                document.write("Sodas: " + numSodas + "<br /><br />");
+                
+                let dogPrice = 4 * numDog;
+                if (numDog > 0)
+                document.write("Hot dog total: $" + dogPrice + "<br /><br />");
+                let friPrice = 3.50 * numFries;
+                if (numFries > 0)
+                document.write("Fries total: $" + friPrice + "<br /><br />");
+                let sodaPrice = 1.75 * numSodas;
+                if (numSodas > 0)
+                document.write("Soda total: $" + sodaPrice + "<br /><br />");
+
+                let subTotal = round(dogPrice + friPrice + sodaPrice);
+                if(subTotal >= 20)
+                {
+                    document.write("Total before tax and discount: $" + subTotal + "<br /><br />");
+                    document.write("Total + discount before tax: $" + round(subTotal * 0.9) + "<br /><br />");
+                    let final = (subTotal * 0.9 * 1.0625);
+                    document.write("Total: $" + round(final) + "<br /><br />");
+                } else 
+                {
+                    let subTotal = round(dogPrice + friPrice + sodaPrice);
+                    document.write("Total before tax: $" + subTotal + "<br /><br />");
+                    let final = round(subTotal * 1.0625);
+                    document.write("Total: $" + final + "<br /><br />");
+                }
+            </script>
+        </p>
+    </div>
+</body>
+</html>
